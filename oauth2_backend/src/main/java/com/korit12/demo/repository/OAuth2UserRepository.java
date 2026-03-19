@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface OAuth2UserRepository extends JpaRepository<OAuth2User, Long> {
 
-    Optional<OAuth2User> findByProviderAndProviderID(String provider, String providerId);
+    Optional<OAuth2User> findByProviderAndProviderId(String provider, String providerId);
 
     boolean existsByUserIdAndProvider(Long userId, String provider);
 }

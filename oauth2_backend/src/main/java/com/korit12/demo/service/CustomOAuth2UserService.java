@@ -42,7 +42,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
         // DB에 소셜 연동 정보 조회
         com.korit12.demo.entity.OAuth2User savedOauth2User = oAuth2UserRepository
-                .findByProviderAndProviderID(provider, providerId)
+                .findByProviderAndProviderId(provider, providerId)
                 .orElse(null);
 
         User user;
